@@ -1,0 +1,24 @@
+{
+  "announcements": [
+    {
+      "id": 1,
+      "title": "A Message from the Commander",
+      "content": "Greetings to all members of the Intelligence Service of the Armed Forces of the Philippines. As we continue our mission to safeguard the nation, I want to emphasize our commitment to excellence, integrity, and service.\n\nOur organization stands as a unified gateway for strategic operations, ensuring that every decision we make contributes to the security and prosperity of our beloved Philippines. The challenges we face require not only advanced technology and sophisticated systems but also the unwavering dedication of each member of our team.\n\nI am proud of the progress we have made in strengthening our operational capabilities and enhancing our strategic partnerships. Together, we are building a more secure future for our nation and our people.\n\nLet us continue to serve with honor, dedication, and the highest professional standards. Mabuhay ang Pilipinas!",
+      "author": "Bgen. PETER N. TANGCOO, PhD",
+      "position": "Administrator",
+      "image": "/images/commander.jpg",
+      "published_at": "2024-06-08",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "WE ARE READY TO PROTECT THE COUNTRY",
+      "content": "The Intelligence Service of the Armed Forces of the Philippines stands ready to defend our nation against all threats. Our commitment to protecting the Philippines and its people remains unwavering.\n\nThrough continuous training, advanced technology, and strategic partnerships, we maintain our readiness to respond to any challenge that may threaten our national security. Every member of our organization is prepared to serve with distinction and honor.\n\nOur motto 'We Are Ready to Protect the Country' reflects not just our capability, but our solemn promise to the Filipino people. We remain vigilant, prepared, and committed to our sacred duty.",
+      "author": "ISAFP Public Affairs",
+      "position": "Communications Office",
+      "image": "/images/protection-banner.jpg",
+      "published_at": "2024-06-07",
+      "featured": false
+    }
+  ]
+}
