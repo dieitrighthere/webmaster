@@ -425,13 +425,7 @@ git push origin your-feature-branch
 - [Semantic Versioning](https://semver.org/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
 
-### Team Contacts
-- **GitLab Admin**: [admin@company.com]
-- **Technical Lead**: [lead@company.com]
-- **DevOps Engineer**: [devops@company.com]
-
 ---
 
-**Last Updated**: [Current Date]  
+**Last Updated**: 11 June 2025
 **Version**: 1.0  
-**Next Review**: [Date + 3 months]
