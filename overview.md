@@ -54,12 +54,12 @@ Content Creation → Draft Status → Review Process → Approval → Publicatio
 
 ### 🔐 Portal System
 - **Multi-System Integration**: Unified access to 8 different Information Systems:
-  - **LMS** (Learning Management System)
+  - **LMS** (Logistics Management System)
   - **PIMS** (Personnel Information Management System)
-  - **NIRMS** (National Intelligence Records Management System)
+  - **NIRMS** (Network and ICT Risk Management System)
   - **SPMS** (Strategic Planning Management System)
   - **ICOMS** (Intelligence Collection Operations Management System)
-  - **UCS** (Unified Communication System)
+  - **UCS** (Unified Clearance System)
   - **FMS** (Financial Management System)
   - **IPED** (Intelligence Personnel and Equipment Database)
 
@@ -68,7 +68,7 @@ Content Creation → Draft Status → Review Process → Approval → Publicatio
 - **Workflow Management**: Draft → Review → Approval → Publication
 - **Version Control**: Track changes with revert capabilities
 - **Multi-User Support**: Role-based access control for different content types
-- **SEO Management**: Meta tags, URL management, and search optimization
+<!-- - **SEO Management**: Meta tags, URL management, and search optimization -->
 
 ### 🔧 Administrative Features
 - **User Management**: Role-based permissions and access control
