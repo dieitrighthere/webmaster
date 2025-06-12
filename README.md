@@ -21,8 +21,8 @@ A modern website for the Intelligence Service of the Armed Forces of the Philipp
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd isafp-website
+git clone https://gitlab.com/dieitrighthere/webmaster.git
+cd webmaster
 ```
 
 2. **Install dependencies**
