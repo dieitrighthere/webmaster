@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-green-700 text-white">
+    <header class="bg-navy-command text-white">
         <!-- Main Header -->
         <div class="py-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,12 +28,6 @@
 
                     <!-- Right Side: AFPNET Status and Login -->
                     <div class="flex items-center space-x-4">
-                        <!-- Debug Info (remove after testing) -->
-                        <!-- <span class="text-xs text-yellow-300" v-if="$page.props.debug">
-                            Debug: AFP={{ $page.props.isAFPNetwork ? 'YES' : 'NO' }} | 
-                            Param={{ $page.props.debug?.afpnet_param || 'none' }}
-                        </span> -->
-                        
                         <!-- Bagong Pilipinas Logo -->
                         <div class="hidden md:block">
                             <img 
@@ -46,7 +40,7 @@
                         
                         <!-- AFPNET Status and Login -->
                         <div class="flex items-center space-x-3">
-                            <span v-if="isAFPNetwork" class="text-green-300 flex items-center">
+                            <span v-if="isAFPNetwork" class="text-honor-gold flex items-center">
                                 <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
@@ -56,7 +50,7 @@
                             <button 
                                 v-if="isAFPNetwork" 
                                 @click="handleLogin"
-                                class="bg-yellow-600 hover:bg-yellow-700 text-gray-900 px-4 py-2 rounded text-sm font-semibold transition-colors"
+                                class="bg-honor-gold hover:bg-yellow-600 text-tactical-black px-4 py-2 rounded text-sm font-semibold transition-colors"
                             >
                                 Login
                             </button>
@@ -67,7 +61,7 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="bg-gray-800 border-t border-gray-700">
+        <nav class="bg-tactical-black border-t border-steel-gray">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex space-x-8">
                     <Link 
@@ -75,65 +69,31 @@
                         :class="[
                             'px-3 py-4 text-sm font-medium transition-colors',
                             currentPage === 'Homepage' 
-                                ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                                ? 'text-honor-gold border-b-2 border-honor-gold' 
                                 : 'text-gray-300 hover:text-white'
                         ]"
                     >
                         Home
                     </Link>
-                    
-                    <!-- <div class="relative group">
-                        <button 
-                            class="px-3 py-4 text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center"
-                        >
-                            Products
-                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        Dropdown would go here
-                    </div> -->
 
                     <Link 
                         href="/newsroom" 
                         :class="[
                             'px-3 py-4 text-sm font-medium transition-colors',
                             (currentPage === 'Newsroom' || currentPage === 'NewsArticle')
-                                ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                                ? 'text-honor-gold border-b-2 border-honor-gold' 
                                 : 'text-gray-300 hover:text-white'
                         ]"
                     >
                         News
                     </Link>
 
-                    <!-- <div class="relative group">
-                        <button 
-                            class="px-3 py-4 text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center"
-                        >
-                            Downloads
-                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div> -->
-
-                    <!-- <div class="relative group">
-                        <button 
-                            class="px-3 py-4 text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center"
-                        >
-                            Libraries
-                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div> -->
-
                     <Link 
                         href="/careers" 
                         :class="[
                             'px-3 py-4 text-sm font-medium transition-colors',
                             currentPage === 'Careers' 
-                                ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                                ? 'text-honor-gold border-b-2 border-honor-gold' 
                                 : 'text-gray-300 hover:text-white'
                         ]"
                     >
@@ -145,7 +105,7 @@
                         :class="[
                             'px-3 py-4 text-sm font-medium transition-colors',
                             currentPage === 'Legacy' 
-                                ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                                ? 'text-honor-gold border-b-2 border-honor-gold' 
                                 : 'text-gray-300 hover:text-white'
                         ]"
                     >
@@ -200,8 +160,8 @@ const handleLogoError = (event) => {
     const parent = event.target.parentElement;
     if (parent && !parent.querySelector('.logo-fallback')) {
         const fallback = document.createElement('div');
-        fallback.className = 'logo-fallback h-16 w-16 mr-4 bg-yellow-500 rounded-full flex items-center justify-center';
-        fallback.innerHTML = '<span class="text-2xl font-bold text-gray-900">AFP</span>';
+        fallback.className = 'logo-fallback h-16 w-16 mr-4 bg-honor-gold rounded-full flex items-center justify-center';
+        fallback.innerHTML = '<span class="text-2xl font-bold text-tactical-black">AFP</span>';
         parent.insertBefore(fallback, parent.firstChild);
     }
 };

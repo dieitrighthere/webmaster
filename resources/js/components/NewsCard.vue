@@ -1,8 +1,8 @@
 <template>
     <Link :href="`/news/${article.slug}`" class="block group">
-        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1">
+        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1 border border-base-gray">
             <!-- Featured Image -->
-            <div class="relative h-48 bg-gray-200 overflow-hidden">
+            <div class="relative h-48 bg-base-gray overflow-hidden">
                 <img 
                     v-if="article.featured_image && !imageError" 
                     :src="article.featured_image" 
@@ -12,7 +12,7 @@
                 >
                 <div 
                     v-if="!article.featured_image || imageError"
-                    class="w-full h-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center"
+                    class="w-full h-full bg-isafp-primary-gradient flex items-center justify-center"
                 >
                     <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
@@ -21,14 +21,14 @@
                 
                 <!-- Category Badge -->
                 <div class="absolute top-4 left-4">
-                    <span class="inline-block bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded">
+                    <span class="inline-block bg-navy-command text-white text-xs font-semibold px-2 py-1 rounded">
                         {{ article.category }}
                     </span>
                 </div>
                 
                 <!-- Featured Badge -->
                 <div v-if="article.featured" class="absolute top-4 right-4">
-                    <span class="inline-block bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded">
+                    <span class="inline-block bg-honor-gold text-tactical-black text-xs font-semibold px-2 py-1 rounded">
                         Featured
                     </span>
                 </div>
@@ -37,12 +37,12 @@
             <!-- Content -->
             <div class="p-6">
                 <!-- Title -->
-                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors line-clamp-2">
+                <h3 class="text-xl font-bold text-navy-command mb-3 group-hover:text-army-green transition-colors line-clamp-2">
                     {{ article.title }}
                 </h3>
                 
                 <!-- Excerpt -->
-                <p class="text-gray-600 mb-4 line-clamp-3">
+                <p class="text-steel-gray mb-4 line-clamp-3">
                     {{ article.excerpt }}
                 </p>
                 
@@ -51,14 +51,14 @@
                     <span 
                         v-for="tag in article.tags.slice(0, 3)" 
                         :key="tag"
-                        class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
+                        class="inline-block bg-command-white text-steel-gray text-xs px-2 py-1 rounded border border-base-gray"
                     >
                         {{ tag }}
                     </span>
                 </div>
 
                 <!-- Meta Information -->
-                <div class="flex justify-between items-center text-sm text-gray-500">
+                <div class="flex justify-between items-center text-sm text-field-gray">
                     <div class="flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Read More Link -->
-                <div class="mt-4 flex items-center text-green-600 font-semibold group-hover:text-green-700">
+                <div class="mt-4 flex items-center text-navy-command font-semibold group-hover:text-army-green">
                     <span class="text-sm">Read More</span>
                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>

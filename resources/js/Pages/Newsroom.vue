@@ -1,7 +1,7 @@
 <template>
     <AppLayout title="Newsroom">
         <!-- Page Header -->
-        <div class="bg-gradient-to-r from-green-700 to-green-600 text-white py-16">
+        <div class="bg-isafp-primary-gradient text-white py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h1 class="text-4xl font-bold mb-4">Newsroom</h1>
@@ -13,14 +13,14 @@
         </div>
 
         <!-- Search and Filter Section -->
-        <div class="bg-white border-b border-gray-200 py-8">
+        <div class="bg-white border-b border-base-gray py-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <!-- Search -->
                     <div class="flex-1 max-w-lg">
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="h-5 w-5 text-field-gray" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
@@ -29,7 +29,7 @@
                                 @keyup.enter="performSearch"
                                 type="text"
                                 placeholder="Search news articles..."
-                                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-green-500 focus:border-green-500"
+                                class="block w-full pl-10 pr-3 py-2 border border-base-gray rounded-md leading-5 bg-white placeholder-field-gray focus:outline-none focus:placeholder-steel-gray focus:ring-1 focus:ring-navy-command focus:border-navy-command"
                             >
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                     <!-- Search Button -->
                     <button 
                         @click="performSearch"
-                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md font-medium transition-colors"
+                        class="bg-navy-command hover:bg-army-green text-white px-6 py-2 rounded-md font-medium transition-colors"
                     >
                         Search
                     </button>
@@ -46,37 +46,37 @@
                     <button 
                         v-if="search"
                         @click="clearSearch"
-                        class="text-gray-600 hover:text-gray-800 px-4 py-2 font-medium transition-colors"
+                        class="text-steel-gray hover:text-tactical-black px-4 py-2 font-medium transition-colors"
                     >
                         Clear
                     </button>
                 </div>
 
                 <!-- Search Results Info -->
-                <div v-if="search" class="mt-4 text-sm text-gray-600">
-                    Search results for: <span class="font-semibold">"{{ search }}"</span>
+                <div v-if="search" class="mt-4 text-sm text-steel-gray">
+                    Search results for: <span class="font-semibold text-navy-command">"{{ search }}"</span>
                     ({{ articles.length }} {{ articles.length === 1 ? 'result' : 'results' }})
                 </div>
             </div>
         </div>
 
         <!-- Articles Section -->
-        <div class="bg-gray-50 py-12">
+        <div class="bg-command-white py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- No Results -->
                 <div v-if="articles.length === 0" class="text-center py-12">
-                    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="mx-auto h-12 w-12 text-field-gray" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
-                    <h3 class="mt-2 text-sm font-medium text-gray-900">No articles found</h3>
-                    <p class="mt-1 text-sm text-gray-500">
+                    <h3 class="mt-2 text-sm font-medium text-navy-command">No articles found</h3>
+                    <p class="mt-1 text-sm text-steel-gray">
                         {{ search ? 'Try adjusting your search terms.' : 'No news articles are currently available.' }}
                     </p>
                 </div>
 
                 <!-- Featured Articles -->
                 <div v-else-if="featuredArticles.length > 0 && !search" class="mb-12">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Featured Stories</h2>
+                    <h2 class="text-2xl font-bold text-navy-command mb-8">Featured Stories</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <NewsCard 
                             v-for="article in featuredArticles" 
@@ -88,7 +88,7 @@
 
                 <!-- All Articles -->
                 <div>
-                    <h2 v-if="!search && featuredArticles.length > 0" class="text-2xl font-bold text-gray-900 mb-8">
+                    <h2 v-if="!search && featuredArticles.length > 0" class="text-2xl font-bold text-navy-command mb-8">
                         Latest News
                     </h2>
                     
@@ -105,7 +105,7 @@
                 <div v-if="hasMoreArticles" class="text-center mt-12">
                     <button 
                         @click="loadMore"
-                        class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+                        class="bg-navy-command hover:bg-army-green text-white font-bold py-3 px-8 rounded-lg transition-colors"
                     >
                         Load More Articles
                     </button>

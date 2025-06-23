@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ISAFP Brand Colors */
+:root {
+  /* Primary Military Colors */
+  --navy-command: #1e3a5f;
+  --army-green: #2d5a3d;
+  --honor-gold: #f4d03f;
+  
+  /* Security Classification Colors */
+  --top-secret: #dc2626;
+  --secret: #ea580c;
+  --unclassified: #16a34a;
+  
+  /* Supporting Neutrals */
+  --tactical-black: #1a2332;
+  --steel-gray: #475569;
+  --field-gray: #94a3b8;
+  --base-gray: #e2e8f0;
+  --command-white: #f8fafc;
+}
+
+/* Custom ISAFP Brand Classes */
+.bg-navy-command { background-color: var(--navy-command); }
+.bg-army-green { background-color: var(--army-green); }
+.bg-honor-gold { background-color: var(--honor-gold); }
+.bg-tactical-black { background-color: var(--tactical-black); }
+.bg-steel-gray { background-color: var(--steel-gray); }
+.bg-command-white { background-color: var(--command-white); }
+
+.text-navy-command { color: var(--navy-command); }
+.text-army-green { color: var(--army-green); }
+.text-honor-gold { color: var(--honor-gold); }
+.text-tactical-black { color: var(--tactical-black); }
+.text-steel-gray { color: var(--steel-gray); }
+
+.border-navy-command { border-color: var(--navy-command); }
+.border-army-green { border-color: var(--army-green); }
+.border-honor-gold { border-color: var(--honor-gold); }
+
+.hover\:bg-navy-command:hover { background-color: var(--navy-command); }
+.hover\:bg-army-green:hover { background-color: var(--army-green); }
+.hover\:bg-honor-gold:hover { background-color: var(--honor-gold); }
+
+.hover\:text-navy-command:hover { color: var(--navy-command); }
+.hover\:text-army-green:hover { color: var(--army-green); }
+.hover\:text-honor-gold:hover { color: var(--honor-gold); }
+
+/* ISAFP Gradient Backgrounds */
+.bg-isafp-primary-gradient {
+  background: linear-gradient(135deg, var(--navy-command) 0%, var(--army-green) 100%);
+}
+
+.bg-isafp-hero-gradient {
+  background: linear-gradient(135deg, var(--army-green) 0%, var(--navy-command) 50%, var(--steel-gray) 100%);
+}
+
+.bg-isafp-accent-gradient {
+  background: linear-gradient(135deg, var(--tactical-black) 0%, var(--steel-gray) 100%);
+}
